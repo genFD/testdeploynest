@@ -6,7 +6,7 @@
   "scripts": {
     "install": "npm install --prefix client && npm install --prefix backend/messages",
     "deploy": "concurrently \"npm start --prefix client\" \"npm run start:prod --prefix backend\"",
-    "deploy:prod":  "concurrently \"npm run server\" \"npm run client\""
+    "deploy:prod":  "concurrently \"npm run install\" \"npm run deploy\""
   },
   "repository": {
     "type": "git"
