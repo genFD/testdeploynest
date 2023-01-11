@@ -13,6 +13,7 @@ const app_service_1 = require("./app.service");
 const messages_module_1 = require("./messages/messages.module");
 const typeorm_1 = require("@nestjs/typeorm");
 const config_1 = require("@nestjs/config");
+const datasource_1 = require("../datasource");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -22,14 +23,7 @@ AppModule = __decorate([
                 isGlobal: true,
                 envFilePath: '.env',
             }),
-            typeorm_1.TypeOrmModule.forRoot({
-                type: 'postgres',
-                host: process.env.DB_HOST,
-                port: parseInt(process.env.DB_PORT),
-                username: process.env.DB_USERNAME,
-                password: process.env.DB_PASSWORD,
-                database: process.env.DB_DATABASE,
-            }),
+            typeorm_1.TypeOrmModule.forRoot(datasource_1.configOptions),
             messages_module_1.MessagesModule,
         ],
         controllers: [app_controller_1.AppController],

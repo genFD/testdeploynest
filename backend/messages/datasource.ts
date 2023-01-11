@@ -7,7 +7,7 @@ export const configOptions: DataSourceOptions = {
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  entities: ['dist/src/**/*.entity.js'],
+  entities: ['dist/src/messages/**/*.entity.js'],
 };
 
 export const dbConfig = new DataSource(configOptions);
