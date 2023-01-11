@@ -8,6 +8,7 @@ export const configOptions: DataSourceOptions = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   entities: ['dist/src/messages/**/*.entity.js'],
+  synchronize: true,
 };
 
 export const dbConfig = new DataSource(configOptions);
