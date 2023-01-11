@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm start --prefix client && npm install --prefix backend/messages && npm run start:prod --prefix backend/messages"
+    "deploy": "npm install --prefix client && npm start --prefix client && npm install --prefix backend/messages && npm run start:prod --prefix backend/messages"
   },
   "repository": {
     "type": "git"
