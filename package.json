@@ -1,0 +1,21 @@
+{
+  "name": "testnest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --prefix client && npm run build --prefix backend/messages",
+    "deploy": "npm run start:prod --prefix backend/messages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hermkan/testdeploynest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hermkan/testdeploynest/issues"
+  },
+  "homepage": "https://github.com/hermkan/testdeploynest#readme"
+}
