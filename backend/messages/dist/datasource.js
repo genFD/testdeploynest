@@ -4,12 +4,13 @@ exports.dbConfig = exports.configOptions = void 0;
 const typeorm_1 = require("typeorm");
 exports.configOptions = {
     type: 'postgres',
-    host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT),
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-    entities: ['dist/src/**/*.entity.js'],
+    host: process.env.PGHOST,
+    port: parseInt(process.env.PGPORT),
+    username: process.env.PGUSER,
+    password: process.env.PGPASSWORD,
+    database: process.env.PGDATABASE,
+    entities: ['dist/src/messages/**/*.entity.js'],
+    synchronize: true,
 };
 exports.dbConfig = new typeorm_1.DataSource(exports.configOptions);
 //# sourceMappingURL=datasource.js.map
