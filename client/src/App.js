@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 const API_URL = "http://localhost:8000/messages";
+const API_URL_PROD = "messages";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -9,7 +10,7 @@ function App() {
   const fetchMessage = async () => {
     try {
       setLoading(false)
-    const {data} = await axios.get(API_URL);
+    const {data} = await axios.get(API_URL_PROD);
     setMessages(data);
     setLoading(true)
     console.log(data);
