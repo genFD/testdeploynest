@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm install --prefix client && npm start --prefix client && npm install --prefix backend/messages && npm run start:prod --prefix backend/messages"
+    "deploy": "concurrently \"npm start --prefix client\" \"npm run start:prod --prefix backend\""
   },
   "repository": {
     "type": "git"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hermkan/testdeploynest/issues"
   },
-  "homepage": "https://github.com/hermkan/testdeploynest#readme"
+  "homepage": "https://github.com/hermkan/testdeploynest#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
