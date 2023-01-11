@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm run start:prod --prefix backend/messages"
+    "deploy": "npm run install --prefix backend/messages && npm run start:prod --prefix backend/messages"
   },
   "repository": {
     "type": "git"
